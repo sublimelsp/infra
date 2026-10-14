@@ -1,8 +1,8 @@
 # sublimelsp-infra
 
-Terraform configuration for the [sublimelsp](https://github.com/sublimelsp) GitHub organization. It manages organization members, repository settings, direct repository collaborators and default branch rulesets.
+Terraform configuration for the [sublimelsp](https://github.com/sublimelsp) GitHub organization. It manages organization members, repository settings, direct repository collaborators, GitHub Actions permissions and default branch rulesets.
 
-Changes are made by editing the YAML files and opening a pull request. GitHub Actions posts the Terraform plan as a comment on the pull request (the plan summary, a table of changed resources and a compact diff, updated on every push) and applies it once merged to `main`.
+Changes are made by editing the YAML files and opening a pull request. GitHub Actions posts the Terraform plan as a comment on the pull request (the plan summary, a table of changed resources and a compact diff; on every push, earlier plan comments are hidden as outdated) and applies it once merged to `main`.
 
 ## Files
 
@@ -13,7 +13,7 @@ Changes are made by editing the YAML files and opening a pull request. GitHub Ac
 | `schemas/*.schema.json` | JSON schemas for the YAML files, for validation and completions in editors that use `yaml-language-server`. |
 | `repos.tf`, `members.tf` | Terraform resources generated from the YAML files. |
 | `versions.tf` | Terraform and provider versions, HCP Terraform state and the GitHub provider. |
-| `imports.tf` | One-time import of the existing organization. Delete after the first apply. |
+| `imports.tf` | One-time import of the existing GitHub Actions permissions. Delete after the first apply. |
 | `.github/workflows/terraform.yml` | Plan on pull requests, apply on push to `main`. |
 | `.github/scripts/plan-report.sh` | Builds the plan report used for the pull request comment and the workflow run summary. |
 
@@ -53,6 +53,8 @@ Available keys:
 | `collaborators` | Direct collaborators (`username: permission`). Permission is one of `pull`, `triage`, `push`, `maintain`, `admin`. Collaborators not listed here are removed. |
 | `protect_default_branch` | Add the "default branch" ruleset, which blocks deleting and force pushing the default branch. Ignored for archived repositories. |
 | `require_linear_history` | Also require linear history on the default branch. |
+| `actions_enabled` | Enable GitHub Actions. Ignored for archived repositories. |
+| `actions_allowed` | Actions that may run: `all`, or `local_only` (only actions and reusable workflows in the organization). |
 | `ruleset_bypass_integrations` | GitHub App IDs that may bypass the default branch ruleset via pull requests. |
 | `required_status_checks` | GitHub Actions check names that must pass before merging into the default branch. Adds the "Require CI" ruleset, which repository admins can bypass. |
 
