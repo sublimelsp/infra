@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=./schemas/members.schema.json
 # Members of the sublimelsp organization and their role (`admin` or `member`).
 
 jwortmann: admin

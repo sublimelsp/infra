@@ -10,6 +10,7 @@ Changes are made by editing the YAML files and opening a pull request. GitHub Ac
 | --- | --- |
 | `repos.yaml` | Repositories, their settings and direct collaborators. |
 | `members.yaml` | Organization members and their role. |
+| `schemas/*.schema.json` | JSON schemas for the YAML files, for validation and completions in editors that use `yaml-language-server`. |
 | `repos.tf`, `members.tf` | Terraform resources generated from the YAML files. |
 | `versions.tf` | Terraform and provider versions, HCP Terraform state and the GitHub provider. |
 | `imports.tf` | One-time import of the existing organization. Delete after the first apply. |

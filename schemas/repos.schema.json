@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "repos.schema.json",
+  "title": "sublimelsp repositories",
+  "description": "Repositories of the sublimelsp organization. Each entry only lists values that differ from `defaults`.",
+  "type": "object",
+  "required": ["defaults", "repos"],
+  "additionalProperties": false,
+  "properties": {
+    "defaults": {
+      "description": "Values used for every repository that does not set them.",
+      "allOf": [{ "$ref": "#/definitions/settings" }],
+      "required": [
+        "visibility",
+        "has_issues",
+        "has_projects",
+        "has_wiki",
+        "has_discussions",
+        "allow_merge_commit",
+        "allow_squash_merge",
+        "allow_rebase_merge",
+        "allow_auto_merge",
+        "allow_update_branch",
+        "delete_branch_on_merge",
+        "archived",
+        "protect_default_branch",
+        "require_linear_history"
+      ]
+    },
+    "repos": {
+      "description": "Repositories, keyed by name. Removing an entry archives the repository.",
+      "type": "object",
+      "propertyNames": {
+        "description": "Repository name.",
+        "pattern": "^[A-Za-z0-9._-]{1,100}$"
+      },
+      "additionalProperties": { "$ref": "#/definitions/settings" }
+    }
+  },
+  "definitions": {
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "description": "Repository description.",
+          "type": "string",
+          "maxLength": 350
+        },
+        "homepage_url": {
+          "description": "Repository website.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "topics": {
+          "description": "Repository topics.",
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,49}$"
+          }
+        },
+        "visibility": {
+          "description": "Repository visibility.",
+          "enum": ["public", "private"]
+        },
+        "has_issues": { "description": "Enable issues.", "type": "boolean" },
+        "has_projects": { "description": "Enable projects.", "type": "boolean" },
+        "has_wiki": { "description": "Enable the wiki.", "type": "boolean" },
+        "has_discussions": { "description": "Enable discussions.", "type": "boolean" },
+        "allow_merge_commit": { "description": "Allow merge commits for pull requests.", "type": "boolean" },
+        "allow_squash_merge": { "description": "Allow squash merging for pull requests.", "type": "boolean" },
+        "allow_rebase_merge": { "description": "Allow rebase merging for pull requests.", "type": "boolean" },
+        "allow_auto_merge": { "description": "Allow auto-merge on pull requests.", "type": "boolean" },
+        "allow_update_branch": { "description": "Always suggest updating pull request branches.", "type": "boolean" },
+        "delete_branch_on_merge": { "description": "Delete head branches after pull requests are merged.", "type": "boolean" },
+        "archived": {
+          "description": "Archive the repository. Unarchiving is not supported by the GitHub API.",
+          "type": "boolean"
+        },
+        "protect_default_branch": {
+          "description": "Add the \"default branch\" ruleset, which blocks deleting and force pushing the default branch. Ignored for archived repositories.",
+          "type": "boolean"
+        },
+        "require_linear_history": {
+          "description": "Also require linear history on the default branch.",
+          "type": "boolean"
+        },
+        "ruleset_bypass_integrations": {
+          "description": "GitHub App IDs that may bypass the default branch ruleset via pull requests.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "integer", "minimum": 1 }
+        },
+        "required_status_checks": {
+          "description": "GitHub Actions check names that must pass before merging into the default branch. Adds the \"Require CI\" ruleset, which repository admins can bypass.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "collaborators": {
+          "description": "Direct collaborators. Collaborators not listed here are removed.",
+          "type": "object",
+          "propertyNames": {
+            "description": "GitHub username.",
+            "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9]|-(?=[A-Za-z0-9])){0,38}$"
+          },
+          "additionalProperties": {
+            "description": "Repository permission.",
+            "enum": ["pull", "triage", "push", "maintain", "admin"]
+          }
+        }
+      }
+    }
+  }
+}

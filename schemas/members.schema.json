@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "members.schema.json",
+  "title": "sublimelsp organization members",
+  "description": "Members of the sublimelsp organization and their role.",
+  "type": "object",
+  "propertyNames": {
+    "description": "GitHub username.",
+    "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9]|-(?=[A-Za-z0-9])){0,38}$"
+  },
+  "additionalProperties": {
+    "description": "Organization role. `admin` is an organization owner.",
+    "enum": ["admin", "member"]
+  }
+}
