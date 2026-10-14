@@ -1,0 +1,66 @@
+name: Terraform
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+# Never run two plans/applies against the organization at the same time.
+concurrency:
+  group: terraform
+  cancel-in-progress: false
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    env:
+      TF_IN_AUTOMATION: "true"
+      TF_INPUT: "false"
+      TF_TOKEN_app_terraform_io: ${{ secrets.TF_API_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: 1.16.5
+          terraform_wrapper: false
+
+      - name: Format
+        run: terraform fmt -check -diff
+
+      - name: Init
+        run: terraform init
+
+      - name: Validate
+        run: terraform validate
+
+      - name: Plan
+        run: |
+          terraform plan -out=tfplan
+          .github/scripts/plan-report.sh tfplan 60000 > plan-report.md
+          .github/scripts/plan-report.sh tfplan 1000000 >> "$GITHUB_STEP_SUMMARY"
+
+      # Creates the plan comment on the pull request, or updates it on later pushes.
+      - name: Comment on pull request
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          comment_id=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- terraform-plan -->"))) | .id' | head -n1)
+          if [[ -n "$comment_id" ]]; then
+            gh api --method PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$comment_id" -F body=@plan-report.md > /dev/null
+          else
+            gh pr comment "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file plan-report.md
+          fi
+
+      - name: Apply
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: terraform apply tfplan
