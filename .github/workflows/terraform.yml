@@ -46,20 +46,22 @@ jobs:
           .github/scripts/plan-report.sh tfplan 60000 > plan-report.md
           .github/scripts/plan-report.sh tfplan 1000000 >> "$GITHUB_STEP_SUMMARY"
 
-      # Creates the plan comment on the pull request, or updates it on later pushes.
+      # Hides earlier plan comments as outdated, then posts the new plan.
       - name: Comment on pull request
         if: github.event_name == 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          comment_id=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments" \
-            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- terraform-plan -->"))) | .id' | head -n1)
-          if [[ -n "$comment_id" ]]; then
-            gh api --method PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$comment_id" -F body=@plan-report.md > /dev/null
-          else
-            gh pr comment "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file plan-report.md
-          fi
+          gh api --paginate "repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- terraform-plan -->"))) | .node_id' |
+            while read -r node_id; do
+              gh api graphql -f id="$node_id" -f query='
+                mutation($id: ID!) {
+                  minimizeComment(input: {subjectId: $id, classifier: OUTDATED}) { clientMutationId }
+                }' > /dev/null
+            done
+          gh pr comment "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file plan-report.md
 
       - name: Apply
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
