@@ -24,7 +24,9 @@
         "delete_branch_on_merge",
         "archived",
         "protect_default_branch",
-        "require_linear_history"
+        "require_linear_history",
+        "actions_enabled",
+        "actions_allowed"
       ]
     },
     "repos": {
@@ -88,6 +90,14 @@
         "require_linear_history": {
           "description": "Also require linear history on the default branch.",
           "type": "boolean"
+        },
+        "actions_enabled": {
+          "description": "Enable GitHub Actions. Ignored for archived repositories.",
+          "type": "boolean"
+        },
+        "actions_allowed": {
+          "description": "Actions and reusable workflows that may run: `all`, or `local_only` (only the ones in the sublimelsp organization). Ignored when `actions_enabled` is false.",
+          "enum": ["all", "local_only"]
         },
         "ruleset_bypass_integrations": {
           "description": "GitHub App IDs that may bypass the default branch ruleset via pull requests.",

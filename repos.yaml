@@ -18,6 +18,8 @@ defaults:
   archived: false
   protect_default_branch: true
   require_linear_history: false
+  actions_enabled: true
+  actions_allowed: all
 
 repos:
   infra:

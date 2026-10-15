@@ -118,3 +118,12 @@ resource "github_repository_ruleset" "require_ci" {
     bypass_mode = "always"
   }
 }
+
+# Enables or disables GitHub Actions and limits which actions can run.
+resource "github_actions_repository_permissions" "actions" {
+  for_each = { for name, repo in local.repos : name => repo if !repo.archived }
+
+  repository      = github_repository.repo[each.key].name
+  enabled         = each.value.actions_enabled
+  allowed_actions = each.value.actions_enabled ? each.value.actions_allowed : null
+}
