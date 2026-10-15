@@ -325,7 +325,6 @@ repos:
     - linting
     - lsp
     - python
-    actions_enabled: false
     collaborators:
       LDAP: admin
   LSP-rust-analyzer:
