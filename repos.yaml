@@ -26,7 +26,6 @@ repos:
     description: Infrastructre for managing sublimelsp organisation
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
   LSP-anakin:
     description: Convenience package for anakin-language-server
     has_projects: true
@@ -39,7 +38,6 @@ repos:
     description: ast-grep support for Sublime's LSP plugin
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
   LSP-astro:
     description: Astro support for Sublime's LSP plugin
   LSP-basedpyright:
@@ -102,7 +100,6 @@ repos:
     description: CSS, SCSS, LESS support for Sublime's LSP plugin
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
     collaborators:
       jfcherng: maintain
   LSP-Dart:
@@ -174,7 +171,6 @@ repos:
     description: HTML support for Sublime's LSP plugin
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
     collaborators:
       jfcherng: admin
       predragnikolic: admin
@@ -182,7 +178,6 @@ repos:
     description: PHP support for Sublime's LSP plugin provided through intelephense.
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
     allow_update_branch: true
     collaborators:
       jfcherng: maintain
@@ -247,7 +242,6 @@ repos:
     description: Convenience package with a lua language server bundled
   LSP-marksman:
     description: An LSP server for Markdown provided through Marksman.
-    allow_merge_commit: true
     collaborators:
       bitsper2nd: maintain
   LSP-nimlangserver:
@@ -276,7 +270,6 @@ repos:
     has_wiki: true
   LSP-performance-test:
     description: Performance Tests for LSP
-    allow_merge_commit: true
   LSP-PowerShellEditorServices:
     description: PowerShell support for Sublime's LSP plugin
     has_projects: true
@@ -343,7 +336,6 @@ repos:
     description: LSP integration with Semgrep - fast static analysis tool powered by an open-source engine for finding bugs, detecting vulnerabilities, and enforcing code standards.
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
   LSP-serenata:
     description: PHP support for Sublime's LSP plugin using Serenata
     has_projects: true
@@ -514,7 +506,6 @@ repos:
     description: Default renovate preset for sublimelsp
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
   repository:
     description: Package repository for Package Control
     homepage_url: https://github.com/sublimelsp/LSP
@@ -527,12 +518,10 @@ repos:
       jfcherng: maintain
   sublime_asyncio:
     has_wiki: true
-    allow_merge_commit: true
   sublime_asyncio_example:
     description: Smoke test for sublime_asyncio library
     has_projects: true
     has_wiki: true
-    allow_merge_commit: true
   workflows:
     description: Shared GitHub workflows
     has_projects: true
