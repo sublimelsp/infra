@@ -41,9 +41,9 @@ repos:
     has_wiki: true
     allow_merge_commit: true
   LSP-astro:
-    description: "Astro support for Sublime's LSP plugin "
+    description: Astro support for Sublime's LSP plugin
   LSP-basedpyright:
-    description: "Python support for Sublime's LSP plugin provided through DetachHead/basedpyright. "
+    description: Python support for Sublime's LSP plugin provided through DetachHead/basedpyright.
     has_projects: true
     has_wiki: true
     collaborators:
@@ -99,7 +99,7 @@ repos:
     collaborators:
       mauroreisvieira: admin
   LSP-css:
-    description: "CSS, SCSS, LESS support for Sublime's LSP plugin "
+    description: CSS, SCSS, LESS support for Sublime's LSP plugin
     has_projects: true
     has_wiki: true
     allow_merge_commit: true
@@ -171,7 +171,7 @@ repos:
     has_projects: true
     has_wiki: true
   LSP-html:
-    description: "HTML support for Sublime's LSP plugin "
+    description: HTML support for Sublime's LSP plugin
     has_projects: true
     has_wiki: true
     allow_merge_commit: true
@@ -278,7 +278,7 @@ repos:
     description: Performance Tests for LSP
     allow_merge_commit: true
   LSP-PowerShellEditorServices:
-    description: "PowerShell support for Sublime's LSP plugin "
+    description: PowerShell support for Sublime's LSP plugin
     has_projects: true
     has_wiki: true
   LSP-prisma:
@@ -291,7 +291,7 @@ repos:
     has_projects: true
     has_wiki: true
   LSP-pyproject:
-    description: "pyproject.toml support for Sublime's LSP plugin provided through pyproject server "
+    description: pyproject.toml support for Sublime's LSP plugin provided through pyproject server
     has_projects: true
     has_wiki: true
   LSP-pyright:
@@ -377,13 +377,13 @@ repos:
       macowie: push
       rchl: admin
   LSP-tailwindcss:
-    description: "Tailwind css support for Sublime's LSP plugin "
+    description: Tailwind css support for Sublime's LSP plugin
     has_projects: true
     has_wiki: true
     collaborators:
       mauroreisvieira: admin
   LSP-taplo:
-    description: "TOML support for Sublime's LSP plugin "
+    description: TOML support for Sublime's LSP plugin
     homepage_url: https://taplo.tamasfe.dev
     has_projects: true
     has_wiki: true
