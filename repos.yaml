@@ -70,7 +70,6 @@ repos:
       timfjord: maintain
   LSP-cspell:
     description: Spell check support for Sublime's LSP plugin provided through cspell.
-    allow_rebase_merge: false
     collaborators:
       mauroreisvieira: admin
   LSP-css:
@@ -132,12 +131,10 @@ repos:
   LSP-jdtls:
     description: Convenience package for the Eclipse JDT language server
     homepage_url: https://packagecontrol.io/packages/LSP-jdtls
-    allow_rebase_merge: false
     collaborators:
       LDAP: maintain
   LSP-json:
     description: Schema validation/completions for your JSON and Sublime files
-    allow_rebase_merge: false
   LSP-julia:
     description: Julia support for Sublime's LSP plugin using LanguageServer.jl
     topics:
@@ -232,7 +229,6 @@ repos:
       LDAP: admin
   LSP-rust-analyzer:
     description: Convenience package for rust-analyzer
-    allow_rebase_merge: false
     require_linear_history: true
     required_status_checks:
     - smoke / Smoke test (ubuntu-latest)
