@@ -13,7 +13,7 @@ defaults:
   allow_squash_merge: true
   allow_rebase_merge: true
   allow_auto_merge: false
-  allow_update_branch: false
+  allow_update_branch: true
   delete_branch_on_merge: true
   archived: false
   protect_default_branch: true
@@ -153,7 +153,6 @@ repos:
   LSP-intelephense:
     description: PHP support for Sublime's LSP plugin provided through intelephense.
     has_projects: true
-    allow_update_branch: true
     collaborators:
       jfcherng: maintain
       willrowe: maintain
@@ -162,7 +161,6 @@ repos:
     homepage_url: https://packagecontrol.io/packages/LSP-jdtls
     has_projects: true
     allow_rebase_merge: false
-    allow_update_branch: true
     collaborators:
       LDAP: maintain
   LSP-json:
@@ -330,7 +328,6 @@ repos:
   LSP-terraform:
     description: Convenience package for the terraform language server
     has_projects: true
-    allow_update_branch: true
     collaborators:
       TerminalFi: admin
   LSP-TexLab:
@@ -365,7 +362,6 @@ repos:
   LSP-typescript:
     description: TypeScript, JavaScript support for Sublime LSP plugin
     has_projects: true
-    allow_update_branch: true
     collaborators:
       predragnikolic: admin
   LSP-vetur:
@@ -409,7 +405,6 @@ repos:
     has_projects: true
     has_discussions: true
     allow_auto_merge: true
-    allow_update_branch: true
     ruleset_bypass_integrations:
     - 2740
   lsp_maintainers:
@@ -440,7 +435,6 @@ repos:
   repository:
     description: Package repository for Package Control
     homepage_url: https://github.com/sublimelsp/LSP
-    allow_update_branch: true
   stubs:
     description: Stub definitions that can be used for type checking LSP packages
     has_projects: true
