@@ -13,7 +13,6 @@ Changes are made by editing the YAML files and opening a pull request. GitHub Ac
 | `schemas/*.schema.json` | JSON schemas for the YAML files, for validation and completions in editors that use `yaml-language-server`. |
 | `repos.tf`, `members.tf` | Terraform resources generated from the YAML files. |
 | `versions.tf` | Terraform and provider versions, HCP Terraform state and the GitHub provider. |
-| `imports.tf` | One-time import of the existing GitHub Actions permissions. Delete after the first apply. |
 | `.github/workflows/terraform.yml` | Plan on pull requests, apply on push to `main`. |
 | `.github/scripts/plan-report.sh` | Builds the plan report used for the pull request comment and the workflow run summary. |
 
@@ -62,6 +61,18 @@ To create a new repository, add an entry. Removing an entry **archives** the rep
 
 Pages, security and analysis settings and the repository template are not managed and can be changed in the GitHub UI.
 
+### Validation
+
+Both YAML files are validated against the JSON schemas in `schemas/`, which reject unknown keys, wrong types and invalid values such as a misspelled setting or a `write` permission (use `push`). The workflow fails before planning if a file is invalid. Editors that use the [YAML language server](https://github.com/redhat-developer/yaml-language-server) (VS Code with the YAML extension, Sublime Text with LSP-yaml) pick the schemas up from the comment on the first line of each file and show errors and completions while editing. To validate locally with [uv](https://docs.astral.sh/uv/):
+
+```bash
+uvx check-jsonschema@0.38.2 --schemafile schemas/repos.schema.json repos.yaml
+```
+
+```bash
+uvx check-jsonschema@0.38.2 --schemafile schemas/members.schema.json members.yaml
+```
+
 ## Authentication
 
 Terraform needs two tokens:
@@ -105,24 +116,6 @@ These steps are needed only once.
 2. In this repository's settings, add the Actions secrets:
    - `TF_API_TOKEN`: an HCP Terraform team or user API token with access to the workspace.
    - `ORG_ADMIN_TOKEN`: a GitHub token of an organization owner with the `admin:org` and `repo` scopes.
-
-3. Import the existing organization into the state. `imports.tf` imports all repositories, collaborators, members and the existing default branch and "Require CI" rulesets. Review the plan, then apply it:
-
-   ```bash
-   terraform init
-   ```
-
-   ```bash
-   terraform plan
-   ```
-
-   ```bash
-   terraform apply
-   ```
-
-   At the time of writing, the plan imports everything without changing existing settings. Apart from that, it renames the 5 existing default branch rulesets to "default branch" and creates the same ruleset on the other 89 non-archived repositories. Set `protect_default_branch: false` in `defaults` before applying if you don't want that.
-
-4. Delete `imports.tf` and commit. Otherwise adding a new repository fails, because Terraform tries to import it.
 
 ## Not managed
 

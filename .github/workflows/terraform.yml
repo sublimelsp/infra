@@ -31,6 +31,15 @@ jobs:
           terraform_version: 1.16.5
           terraform_wrapper: false
 
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          enable-cache: false
+
+      - name: Validate YAML files
+        run: |
+          uvx check-jsonschema@0.38.2 --schemafile schemas/repos.schema.json repos.yaml
+          uvx check-jsonschema@0.38.2 --schemafile schemas/members.schema.json members.yaml
+
       - name: Format
         run: terraform fmt -check -diff
 
