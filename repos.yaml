@@ -25,11 +25,9 @@ repos:
   infra:
     description: Infrastructre for managing sublimelsp organisation
     has_projects: true
-    has_wiki: true
   LSP-anakin:
     description: Convenience package for anakin-language-server
     has_projects: true
-    has_wiki: true
   LSP-angular:
     description: Convenience plugin for Angular Language Service
     collaborators:
@@ -37,13 +35,11 @@ repos:
   LSP-ast-grep:
     description: ast-grep support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
   LSP-astro:
     description: Astro support for Sublime's LSP plugin
   LSP-basedpyright:
     description: Python support for Sublime's LSP plugin provided through DetachHead/basedpyright.
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: admin
   LSP-bash:
@@ -53,13 +49,11 @@ repos:
     - sublime-lsp-plugin
     - sublime-text
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: admin
   LSP-Bicep:
     description: Language tooling for the Bicep language
     has_projects: true
-    has_wiki: true
     collaborators:
       rgant: maintain
   LSP-biome:
@@ -68,23 +62,19 @@ repos:
   LSP-bitbake:
     description: Bitbake Language Server for Sublime Text
     has_projects: true
-    has_wiki: true
     collaborators:
       huyhoang8398: maintain
   LSP-clangd:
     description: C/C++ support for Sublime's LSP plugin provided through clangd.
     has_projects: true
-    has_wiki: true
     collaborators:
       LDAP: admin
   LSP-cmake:
     description: Convenience package for a basic cmake-language-server
     has_projects: true
-    has_wiki: true
   LSP-copilot:
     description: GitHub Copilot support for Sublime Text LSP plugin provided through Copilot.vim.
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: maintain
       TerminalFi: maintain
@@ -92,14 +82,12 @@ repos:
   LSP-cspell:
     description: Spell check support for Sublime's LSP plugin provided through cspell.
     has_projects: true
-    has_wiki: true
     allow_rebase_merge: false
     collaborators:
       mauroreisvieira: admin
   LSP-css:
     description: CSS, SCSS, LESS support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: maintain
   LSP-Dart:
@@ -109,31 +97,25 @@ repos:
     - language-server
     - sublime-text
     has_projects: true
-    has_wiki: true
   LSP-Deno:
     description: Convenience package for starting the deno lsp server
     has_projects: true
-    has_wiki: true
   LSP-dockerfile:
     description: Dockerfile support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
   LSP-elixir:
     description: Elixir support for Sublime LSP plugin
     homepage_url: https://lsp.sublimetext.io/
     has_projects: true
-    has_wiki: true
     collaborators:
       ihabunek: admin
       princemaple: maintain
   LSP-elm:
     description: Elm support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
   LSP-eslint:
     description: ESLint support for Sublime LSP plugin
     has_projects: true
-    has_wiki: true
   LSP-esphome:
     description: Validation, completion and hover help for ESPHome Yaml files.
     has_projects: true
@@ -142,17 +124,14 @@ repos:
   LSP-file-watcher-rust:
     description: File watcher implementation for Sublime LSP in Rust
     has_projects: true
-    has_wiki: true
     collaborators:
       ruihe774: maintain
   LSP-flow:
     description: Helper package that sets up your flow LSP server automatically
     has_projects: true
-    has_wiki: true
   LSP-gh-actions:
     description: GitHub Actions workflows language server provided through @actions/languageserver
     has_projects: true
-    has_wiki: true
   LSP-gopls:
     description: Golang support for Sublime's LSP plugin
     collaborators:
@@ -160,24 +139,20 @@ repos:
   LSP-Grammarly:
     description: Grammarly support for Sublime's LSP plugin, using the Grammarly language server
     has_projects: true
-    has_wiki: true
     collaborators:
       chapeiro: push
   LSP-graphql:
     description: GraphQL support for Sublime's LSP package
     has_projects: true
-    has_wiki: true
   LSP-html:
     description: HTML support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: admin
       predragnikolic: admin
   LSP-intelephense:
     description: PHP support for Sublime's LSP plugin provided through intelephense.
     has_projects: true
-    has_wiki: true
     allow_update_branch: true
     collaborators:
       jfcherng: maintain
@@ -186,7 +161,6 @@ repos:
     description: Convenience package for the Eclipse JDT language server
     homepage_url: https://packagecontrol.io/packages/LSP-jdtls
     has_projects: true
-    has_wiki: true
     allow_rebase_merge: false
     allow_update_branch: true
     collaborators:
@@ -194,7 +168,6 @@ repos:
   LSP-json:
     description: Schema validation/completions for your JSON and Sublime files
     has_projects: true
-    has_wiki: true
     allow_rebase_merge: false
   LSP-julia:
     description: Julia support for Sublime's LSP plugin using LanguageServer.jl
@@ -211,7 +184,6 @@ repos:
   LSP-lean:
     description: Lean support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
     collaborators:
       LexouDuck: maintain
   LSP-lemminx:
@@ -221,7 +193,6 @@ repos:
     - sublime-plugin
     - sublime-text
     has_projects: true
-    has_wiki: true
   LSP-leo:
     description: Leo syntax and language server
     collaborators:
@@ -230,7 +201,6 @@ repos:
   LSP-ltex-ls-plus:
     description: Convenience package for the LTeX Language Server (Spell/Grammar check for LaTex and Markdown)
     has_projects: true
-    has_wiki: true
     collaborators:
       LDAP: admin
   LSP-ltex-ls:
@@ -247,65 +217,52 @@ repos:
   LSP-nimlangserver:
     description: A convenience package for the official Nim language server.
     has_projects: true
-    has_wiki: true
     collaborators:
       AmjadHD: admin
   LSP-OmniSharp:
     description: Convenience plugin to install/update OmniSharp for LSP
     has_projects: true
-    has_wiki: true
     collaborators:
       genericptr: maintain
   LSP-oxfmt:
     description: Oxfmt LSP server for Sublime Text
     has_projects: true
-    has_wiki: true
   LSP-oxlint:
     description: Oxlint LSP server for Sublime Text
     has_projects: true
-    has_wiki: true
   lsp-package-reviewer-checks:
     description: Additional st_package_reviewer checks for packages in sublimelsp/repository
     has_projects: true
-    has_wiki: true
   LSP-performance-test:
     description: Performance Tests for LSP
   LSP-PowerShellEditorServices:
     description: PowerShell support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
   LSP-prisma:
     description: Prisma schema support for Sublime Text's LSP package using the Prisma Language Tools.
     has_projects: true
-    has_wiki: true
     has_discussions: true
   LSP-pylsp:
     description: Convenience package for the Python Language Server
     has_projects: true
-    has_wiki: true
   LSP-pyproject:
     description: pyproject.toml support for Sublime's LSP plugin provided through pyproject server
     has_projects: true
-    has_wiki: true
   LSP-pyright:
     description: Python support for Sublime's LSP plugin provided through microsoft/pyright.
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: admin
   lsp-python-types:
     description: LSP types for python 3.8
     has_projects: true
-    has_wiki: true
   LSP-R:
     description: Convenience package for the R language server
     has_projects: true
-    has_wiki: true
     collaborators:
       randy3k: admin
   LSP-relay:
     has_projects: true
-    has_wiki: true
     collaborators:
       Tyderion: maintain
   LSP-rome:
@@ -323,7 +280,6 @@ repos:
   LSP-rust-analyzer:
     description: Convenience package for rust-analyzer
     has_projects: true
-    has_wiki: true
     allow_rebase_merge: false
     require_linear_history: true
     required_status_checks:
@@ -335,11 +291,9 @@ repos:
   LSP-semgrep:
     description: LSP integration with Semgrep - fast static analysis tool powered by an open-source engine for finding bugs, detecting vulnerabilities, and enforcing code standards.
     has_projects: true
-    has_wiki: true
   LSP-serenata:
     description: PHP support for Sublime's LSP plugin using Serenata
     has_projects: true
-    has_wiki: true
     collaborators:
       mdeboer: admin
   LSP-some-sass:
@@ -350,39 +304,32 @@ repos:
   LSP-SonarLint:
     description: Linting from SonarSource
     has_projects: true
-    has_wiki: true
   LSP-SourceKit:
     description: Convenience plugin for Apple's SourceKit language server
     has_projects: true
-    has_wiki: true
   LSP-stylelint:
     description: Stylelint support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
   LSP-svelte:
     description: Convenience plugin for Svelte Language Tools
   LSP-systemd:
     description: SublimeText LSP Support for https://github.com/JFryy/systemd-lsp
     has_projects: true
-    has_wiki: true
     collaborators:
       macowie: push
       rchl: admin
   LSP-tailwindcss:
     description: Tailwind css support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
     collaborators:
       mauroreisvieira: admin
   LSP-taplo:
     description: TOML support for Sublime's LSP plugin
     homepage_url: https://taplo.tamasfe.dev
     has_projects: true
-    has_wiki: true
   LSP-terraform:
     description: Convenience package for the terraform language server
     has_projects: true
-    has_wiki: true
     allow_update_branch: true
     collaborators:
       TerminalFi: admin
@@ -399,48 +346,39 @@ repos:
     - sublime-text
     - typst
     has_projects: true
-    has_wiki: true
   LSP-tombi:
     description: TOML support for Sublime's LSP plugin provided through Tombi
     has_projects: true
-    has_wiki: true
   LSP-tsgo:
     description: TypeScript, JavaScript support for Sublime LSP plugin based on typescript-go
     has_projects: true
-    has_wiki: true
   LSP-twiggy:
     description: Twig support for Sublime’s LSP plugin
     has_projects: true
-    has_wiki: true
     collaborators:
       niksy: maintain
   LSP-ty:
     description: LSP helper for ty - an extremely fast Python type checker, written in Rust.
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: admin
   LSP-typescript:
     description: TypeScript, JavaScript support for Sublime LSP plugin
     has_projects: true
-    has_wiki: true
     allow_update_branch: true
     collaborators:
       predragnikolic: admin
   LSP-vetur:
     description: Vue support for Sublime's LSP plugin through Vetur (DEPRECATED)
     has_projects: true
-    has_wiki: true
   LSP-volar:
     description: Vue support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
     collaborators:
       ElMassimo: admin
   LSP-vue:
     description: Vue support for Sublime's LSP plugin
     has_projects: true
-    has_wiki: true
   LSP-wren-lsp:
     description: Wren language support for Sublime Text
     has_projects: true
@@ -469,7 +407,6 @@ repos:
     - lsp
     - sublime-text
     has_projects: true
-    has_wiki: true
     has_discussions: true
     allow_auto_merge: true
     allow_update_branch: true
@@ -478,16 +415,13 @@ repos:
   lsp_maintainers:
     description: Setup a sublime project containing all LSP-plugins.
     has_projects: true
-    has_wiki: true
   lsp_smoke_test:
     description: GitHub Action that smoke-tests LSP packages for Sublime Text
     has_projects: true
-    has_wiki: true
   lsp_utils:
     description: Module with LSP-related utilities for Sublime Text
     homepage_url: https://sublimelsp.github.io/lsp_utils/
     has_projects: true
-    has_wiki: true
     allow_auto_merge: true
     required_status_checks:
     - CI
@@ -495,17 +429,14 @@ repos:
   node-pointer-compression-builds:
     description: NodeJS runtime pointer compression builds
     has_projects: true
-    has_wiki: true
     collaborators:
       rchl: admin
   notify-repository-on-published-release-action:
     description: Github Action that sends a "published release" event payload to sublimelsp/repository
     has_projects: true
-    has_wiki: true
   renovate-preset:
     description: Default renovate preset for sublimelsp
     has_projects: true
-    has_wiki: true
   repository:
     description: Package repository for Package Control
     homepage_url: https://github.com/sublimelsp/LSP
@@ -513,16 +444,12 @@ repos:
   stubs:
     description: Stub definitions that can be used for type checking LSP packages
     has_projects: true
-    has_wiki: true
     collaborators:
       jfcherng: maintain
-  sublime_asyncio:
-    has_wiki: true
+  sublime_asyncio: {}
   sublime_asyncio_example:
     description: Smoke test for sublime_asyncio library
     has_projects: true
-    has_wiki: true
   workflows:
     description: Shared GitHub workflows
     has_projects: true
-    has_wiki: true
