@@ -114,6 +114,7 @@ repos:
       TerminalFi: maintain
   LSP-Grammarly:
     description: Grammarly support for Sublime's LSP plugin, using the Grammarly language server
+    archived: true
     collaborators:
       chapeiro: push
   LSP-graphql:
