@@ -106,7 +106,7 @@
           "items": { "type": "integer", "minimum": 1 }
         },
         "required_status_checks": {
-          "description": "GitHub Actions check names that must pass before merging into the default branch. Adds the \"Require CI\" ruleset, which repository admins can bypass.",
+          "description": "GitHub Actions check names that must pass before merging into the default branch. Adds the \"Require CI\" ruleset, which organization owners and repository admins and maintainers can bypass.",
           "type": "array",
           "uniqueItems": true,
           "items": { "type": "string", "minLength": 1 }

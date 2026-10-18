@@ -82,7 +82,8 @@ resource "github_repository_ruleset" "default_branch" {
   }
 }
 
-# Requires the listed GitHub Actions checks to pass before merging into the default branch. Repository admins can bypass it.
+# Requires the listed GitHub Actions checks to pass before merging into the default branch. Organization owners and
+# repository admins and maintainers can bypass it.
 resource "github_repository_ruleset" "require_ci" {
   for_each = { for name, repo in local.repos : name => repo if length(try(repo.required_status_checks, [])) > 0 && !repo.archived }
 
@@ -113,7 +114,18 @@ resource "github_repository_ruleset" "require_ci" {
   }
 
   bypass_actors {
+    actor_type  = "OrganizationAdmin"
+    bypass_mode = "always"
+  }
+
+  bypass_actors {
     actor_id    = 5 # Repository admin role
+    actor_type  = "RepositoryRole"
+    bypass_mode = "always"
+  }
+
+  bypass_actors {
+    actor_id    = 2 # Repository maintain role
     actor_type  = "RepositoryRole"
     bypass_mode = "always"
   }
