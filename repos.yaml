@@ -123,7 +123,6 @@ repos:
     description: HTML support for Sublime's LSP plugin
     collaborators:
       jfcherng: admin
-      predragnikolic: admin
   LSP-intelephense:
     description: PHP support for Sublime's LSP plugin provided through intelephense.
     collaborators:
@@ -259,7 +258,6 @@ repos:
     description: SublimeText LSP Support for https://github.com/JFryy/systemd-lsp
     collaborators:
       macowie: push
-      rchl: admin
   LSP-tailwindcss:
     description: Tailwind css support for Sublime's LSP plugin
     collaborators:
@@ -297,8 +295,6 @@ repos:
       jfcherng: admin
   LSP-typescript:
     description: TypeScript, JavaScript support for Sublime LSP plugin
-    collaborators:
-      predragnikolic: admin
   LSP-vetur:
     description: Vue support for Sublime's LSP plugin through Vetur (DEPRECATED)
   LSP-volar:
@@ -351,8 +347,6 @@ repos:
     - Type-check community packages
   node-pointer-compression-builds:
     description: NodeJS runtime pointer compression builds
-    collaborators:
-      rchl: admin
   notify-repository-on-published-release-action:
     description: Github Action that sends a "published release" event payload to sublimelsp/repository
   renovate-preset:
