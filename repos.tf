@@ -113,19 +113,20 @@ resource "github_repository_ruleset" "require_ci" {
     }
   }
 
+  # Listed in the order the API returns them, as the provider compares them by position.
   bypass_actors {
     actor_type  = "OrganizationAdmin"
     bypass_mode = "always"
   }
 
   bypass_actors {
-    actor_id    = 5 # Repository admin role
+    actor_id    = 2 # Repository maintain role
     actor_type  = "RepositoryRole"
     bypass_mode = "always"
   }
 
   bypass_actors {
-    actor_id    = 2 # Repository maintain role
+    actor_id    = 5 # Repository admin role
     actor_type  = "RepositoryRole"
     bypass_mode = "always"
   }
