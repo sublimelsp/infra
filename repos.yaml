@@ -24,6 +24,8 @@ defaults:
 repos:
   infra:
     description: Infrastructre for managing sublimelsp organisation
+    required_status_checks:
+      - terraform
   LSP-anakin:
     description: Convenience package for anakin-language-server
   LSP-angular:
