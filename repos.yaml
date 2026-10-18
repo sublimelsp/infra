@@ -206,6 +206,8 @@ repos:
     description: pyproject.toml support for Sublime's LSP plugin provided through pyproject server
   LSP-pyright:
     description: Python support for Sublime's LSP plugin provided through microsoft/pyright.
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       jfcherng: admin
   lsp-python-types:
@@ -233,9 +235,7 @@ repos:
     description: Convenience package for rust-analyzer
     require_linear_history: true
     required_status_checks:
-    - smoke / Smoke test (ubuntu-latest)
-    - smoke / Smoke test (macos-latest)
-    - smoke / Smoke test (windows-latest)
+    - smoke / Smoke test result
     collaborators:
       daggy1234: maintain
   LSP-semgrep:

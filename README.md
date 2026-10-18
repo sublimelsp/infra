@@ -55,7 +55,7 @@ Available keys:
 | `actions_enabled` | Enable GitHub Actions. Ignored for archived repositories. |
 | `actions_allowed` | Actions that may run: `all`, or `local_only` (only actions and reusable workflows in the organization). |
 | `ruleset_bypass_integrations` | GitHub App IDs that may bypass the default branch ruleset via pull requests. |
-| `required_status_checks` | GitHub Actions check names that must pass before merging into the default branch. Adds the "Require CI" ruleset, which repository admins can bypass. |
+| `required_status_checks` | GitHub Actions check names that must pass before merging into the default branch. Adds the "Require CI" ruleset, which organization owners and repository admins and maintainers can bypass. |
 
 To create a new repository, add an entry. Removing an entry **archives** the repository (`archive_on_destroy`); it is never deleted by Terraform.
 
