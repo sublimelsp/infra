@@ -259,7 +259,6 @@ repos:
     description: SublimeText LSP Support for https://github.com/JFryy/systemd-lsp
     collaborators:
       macowie: push
-      rchl: admin
   LSP-tailwindcss:
     description: Tailwind css support for Sublime's LSP plugin
     collaborators:
@@ -351,8 +350,6 @@ repos:
     - Type-check community packages
   node-pointer-compression-builds:
     description: NodeJS runtime pointer compression builds
-    collaborators:
-      rchl: admin
   notify-repository-on-published-release-action:
     description: Github Action that sends a "published release" event payload to sublimelsp/repository
   renovate-preset:
