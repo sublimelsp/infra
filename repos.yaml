@@ -123,7 +123,6 @@ repos:
     description: HTML support for Sublime's LSP plugin
     collaborators:
       jfcherng: admin
-      predragnikolic: admin
   LSP-intelephense:
     description: PHP support for Sublime's LSP plugin provided through intelephense.
     collaborators:
@@ -296,8 +295,6 @@ repos:
       jfcherng: admin
   LSP-typescript:
     description: TypeScript, JavaScript support for Sublime LSP plugin
-    collaborators:
-      predragnikolic: admin
   LSP-vetur:
     description: Vue support for Sublime's LSP plugin through Vetur (DEPRECATED)
   LSP-volar:
