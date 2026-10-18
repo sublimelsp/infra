@@ -336,6 +336,8 @@ repos:
     - 2740
   lsp_maintainers:
     description: Setup a sublime project containing all LSP-plugins.
+  lsp_release_workflow:
+    description: Reusable GitHub workflow that releases LSP packages for Sublime Text
   lsp_smoke_test:
     description: GitHub Action that smoke-tests LSP packages for Sublime Text
   lsp_utils:
