@@ -28,6 +28,7 @@ repos:
       - terraform
   LSP-anakin:
     description: Convenience package for anakin-language-server
+    archived: true
   LSP-angular:
     description: Convenience plugin for Angular Language Service
     collaborators:
