@@ -41,6 +41,8 @@ repos:
     description: Python support for Sublime's LSP plugin provided through DetachHead/basedpyright.
     collaborators:
       jfcherng: admin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-bash:
     description: Bash support for Sublime's LSP plugin provided through bash-language-server.
     topics:
@@ -207,10 +209,10 @@ repos:
     description: pyproject.toml support for Sublime's LSP plugin provided through pyproject server
   LSP-pyright:
     description: Python support for Sublime's LSP plugin provided through microsoft/pyright.
-    required_status_checks:
-    - smoke / Smoke test result
     collaborators:
       jfcherng: admin
+    required_status_checks:
+    - smoke / Smoke test result
   lsp-python-types:
     description: LSP types for python 3.8
   LSP-R:
