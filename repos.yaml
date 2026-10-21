@@ -105,6 +105,8 @@ repos:
     description: ESLint support for Sublime LSP plugin
   LSP-esphome:
     description: Validation, completion and hover help for ESPHome Yaml files.
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-file-watcher-chokidar:
     description: Chokidar-based file watcher implementation for LSP
   LSP-file-watcher-rust:
