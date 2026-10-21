@@ -352,7 +352,6 @@ repos:
     - sublime-text
     has_projects: true
     has_discussions: true
-    allow_auto_merge: true
     ruleset_bypass_integrations:
     - 2740
     required_status_checks:
