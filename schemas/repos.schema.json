@@ -76,7 +76,7 @@
         "allow_merge_commit": { "description": "Allow merge commits for pull requests.", "type": "boolean" },
         "allow_squash_merge": { "description": "Allow squash merging for pull requests.", "type": "boolean" },
         "allow_rebase_merge": { "description": "Allow rebase merging for pull requests.", "type": "boolean" },
-        "allow_auto_merge": { "description": "Allow auto-merge on pull requests.", "type": "boolean" },
+        "allow_auto_merge": { "description": "Allow auto-merge on pull requests. Always allowed in repositories with `required_status_checks`.", "type": "boolean" },
         "allow_update_branch": { "description": "Always suggest updating pull request branches.", "type": "boolean" },
         "delete_branch_on_merge": { "description": "Delete head branches after pull requests are merged.", "type": "boolean" },
         "archived": {
