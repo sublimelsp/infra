@@ -31,6 +31,8 @@ repos:
     archived: true
   LSP-angular:
     description: Convenience plugin for Angular Language Service
+    required_status_checks:
+    - Smoke test result
     collaborators:
       princemaple: maintain
   LSP-ast-grep:
