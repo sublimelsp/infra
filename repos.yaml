@@ -236,6 +236,8 @@ repos:
     - linting
     - lsp
     - python
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       LDAP: admin
   LSP-rust-analyzer:
