@@ -6,6 +6,8 @@ locals {
   }
 }
 
+# Auto-merge is always allowed in repositories with required status checks, since the "Require CI" ruleset makes
+# auto-merged pull requests wait for them.
 resource "github_repository" "repo" {
   for_each = local.repos
 
@@ -21,7 +23,7 @@ resource "github_repository" "repo" {
   allow_merge_commit     = each.value.allow_merge_commit
   allow_squash_merge     = each.value.allow_squash_merge
   allow_rebase_merge     = each.value.allow_rebase_merge
-  allow_auto_merge       = each.value.allow_auto_merge
+  allow_auto_merge       = each.value.allow_auto_merge || length(try(each.value.required_status_checks, [])) > 0
   allow_update_branch    = each.value.allow_update_branch
   delete_branch_on_merge = each.value.delete_branch_on_merge
   archived               = each.value.archived

@@ -364,7 +364,6 @@ repos:
   lsp_utils:
     description: Module with LSP-related utilities for Sublime Text
     homepage_url: https://sublimelsp.github.io/lsp_utils/
-    allow_auto_merge: true
     required_status_checks:
     - CI
     - Type-check community packages

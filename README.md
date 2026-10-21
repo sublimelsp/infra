@@ -47,7 +47,7 @@ Available keys:
 | `visibility` | `public` or `private`. |
 | `has_issues`, `has_projects`, `has_wiki`, `has_discussions` | Enabled features. |
 | `allow_merge_commit`, `allow_squash_merge`, `allow_rebase_merge` | Allowed pull request merge methods. |
-| `allow_auto_merge`, `allow_update_branch`, `delete_branch_on_merge` | Pull request options. |
+| `allow_auto_merge`, `allow_update_branch`, `delete_branch_on_merge` | Pull request options. Auto-merge is always allowed in repositories with `required_status_checks`. |
 | `archived` | Archive the repository. Unarchiving is not supported by the GitHub API. |
 | `collaborators` | Direct collaborators (`username: permission`). Permission is one of `pull`, `triage`, `push`, `maintain`, `admin`. Collaborators not listed here are removed. |
 | `protect_default_branch` | Add the "default branch" ruleset, which blocks deleting and force pushing the default branch. Ignored for archived repositories. |
