@@ -196,6 +196,8 @@ repos:
     - smoke / Smoke test result
   LSP-oxlint:
     description: Oxlint LSP server for Sublime Text
+    required_status_checks:
+    - smoke / Smoke test result
   lsp-package-reviewer-checks:
     description: Additional st_package_reviewer checks for packages in sublimelsp/repository
   LSP-performance-test:
