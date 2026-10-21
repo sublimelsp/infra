@@ -308,6 +308,8 @@ repos:
       niksy: maintain
   LSP-ty:
     description: LSP helper for ty - an extremely fast Python type checker, written in Rust.
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       jfcherng: admin
   LSP-typescript:
