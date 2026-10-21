@@ -57,6 +57,8 @@ repos:
       rgant: maintain
   LSP-biome:
     description: Biome LSP server for Sublime Text
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-bitbake:
     description: Bitbake Language Server for Sublime Text
     collaborators:
