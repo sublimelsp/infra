@@ -211,6 +211,8 @@ repos:
   LSP-prisma:
     description: Prisma schema support for Sublime Text's LSP package using the Prisma Language Tools.
     has_discussions: true
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-pylsp:
     description: Convenience package for the Python Language Server
     required_status_checks:
