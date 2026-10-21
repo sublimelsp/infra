@@ -355,6 +355,10 @@ repos:
     allow_auto_merge: true
     ruleset_bypass_integrations:
     - 2740
+    required_status_checks:
+    - Lint
+    - Unittesting result
+    - Type-check community packages
   lsp_maintainers:
     description: Setup a sublime project containing all LSP-plugins.
   lsp_release_workflow:
