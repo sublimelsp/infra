@@ -192,6 +192,8 @@ repos:
       genericptr: maintain
   LSP-oxfmt:
     description: Oxfmt LSP server for Sublime Text
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-oxlint:
     description: Oxlint LSP server for Sublime Text
   lsp-package-reviewer-checks:
