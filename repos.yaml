@@ -156,6 +156,8 @@ repos:
       jwortmann: admin
   LSP-kotlin:
     description: Kotlin support for Sublime's LSP package
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       TerminalFi: maintain
   LSP-lean:
