@@ -137,6 +137,8 @@ repos:
     - smoke / Smoke test result
   LSP-gopls:
     description: Golang support for Sublime's LSP plugin
+    required_status_checks:
+    - Smoke test result
     collaborators:
       TerminalFi: maintain
   LSP-Grammarly:
