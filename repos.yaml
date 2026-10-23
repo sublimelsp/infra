@@ -277,6 +277,8 @@ repos:
     description: Stylelint support for Sublime's LSP plugin
   LSP-svelte:
     description: Convenience plugin for Svelte Language Tools
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-systemd:
     description: SublimeText LSP Support for https://github.com/JFryy/systemd-lsp
     collaborators:
@@ -290,6 +292,8 @@ repos:
     homepage_url: https://taplo.tamasfe.dev
   LSP-terraform:
     description: Convenience package for the terraform language server
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       TerminalFi: admin
   LSP-TexLab:
@@ -306,8 +310,12 @@ repos:
     - typst
   LSP-tombi:
     description: TOML support for Sublime's LSP plugin provided through Tombi
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-tsgo:
     description: TypeScript, JavaScript support for Sublime LSP plugin based on typescript-go
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-twiggy:
     description: Twig support for Sublime’s LSP plugin
     collaborators:
