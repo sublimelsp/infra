@@ -273,6 +273,8 @@ repos:
     description: Linting from SonarSource
   LSP-SourceKit:
     description: Convenience plugin for Apple's SourceKit language server
+    required_status_checks:
+    - Smoke test result
   LSP-stylelint:
     description: Stylelint support for Sublime's LSP plugin
   LSP-svelte:
