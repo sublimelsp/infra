@@ -39,6 +39,8 @@ repos:
     description: ast-grep support for Sublime's LSP plugin
   LSP-astro:
     description: Astro support for Sublime's LSP plugin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-basedpyright:
     description: Python support for Sublime's LSP plugin provided through DetachHead/basedpyright.
     collaborators:
@@ -91,10 +93,16 @@ repos:
     - dart-analysis-server
     - language-server
     - sublime-text
+    required_status_checks:
+    - Smoke test result
   LSP-Deno:
     description: Convenience package for starting the deno lsp server
+    required_status_checks:
+    - Smoke test result
   LSP-dockerfile:
     description: Dockerfile support for Sublime's LSP plugin
+    required_status_checks:
+    - Smoke test result
   LSP-elixir:
     description: Elixir support for Sublime LSP plugin
     homepage_url: https://lsp.sublimetext.io/
@@ -103,8 +111,12 @@ repos:
       princemaple: maintain
   LSP-elm:
     description: Elm support for Sublime's LSP plugin
+    required_status_checks:
+    - Smoke test result
   LSP-eslint:
     description: ESLint support for Sublime LSP plugin
+    required_status_checks:
+    - Smoke test result
   LSP-esphome:
     description: Validation, completion and hover help for ESPHome Yaml files.
     required_status_checks:
@@ -117,8 +129,12 @@ repos:
       ruihe774: maintain
   LSP-flow:
     description: Helper package that sets up your flow LSP server automatically
+    required_status_checks:
+    - Smoke test result
   LSP-gh-actions:
     description: GitHub Actions workflows language server provided through @actions/languageserver
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-gopls:
     description: Golang support for Sublime's LSP plugin
     collaborators:
@@ -130,6 +146,8 @@ repos:
       chapeiro: push
   LSP-graphql:
     description: GraphQL support for Sublime's LSP package
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-html:
     description: HTML support for Sublime's LSP plugin
     collaborators:
@@ -146,6 +164,8 @@ repos:
       LDAP: maintain
   LSP-json:
     description: Schema validation/completions for your JSON and Sublime files
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-julia:
     description: Julia support for Sublime's LSP plugin using LanguageServer.jl
     topics:
@@ -170,6 +190,8 @@ repos:
     - lsp
     - sublime-plugin
     - sublime-text
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-leo:
     description: Leo syntax and language server
     collaborators:
@@ -186,6 +208,8 @@ repos:
       LDAP: admin
   LSP-lua:
     description: Convenience package with a lua language server bundled
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-marksman:
     description: An LSP server for Markdown provided through Marksman.
     collaborators:
@@ -212,6 +236,8 @@ repos:
     description: Performance Tests for LSP
   LSP-PowerShellEditorServices:
     description: PowerShell support for Sublime's LSP plugin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-prisma:
     description: Prisma schema support for Sublime Text's LSP package using the Prisma Language Tools.
     has_discussions: true
@@ -223,6 +249,8 @@ repos:
     - smoke / Smoke test result
   LSP-pyproject:
     description: pyproject.toml support for Sublime's LSP plugin provided through pyproject server
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-pyright:
     description: Python support for Sublime's LSP plugin provided through microsoft/pyright.
     collaborators:
@@ -277,6 +305,8 @@ repos:
     - Smoke test result
   LSP-stylelint:
     description: Stylelint support for Sublime's LSP plugin
+    required_status_checks:
+    - Smoke test result
   LSP-svelte:
     description: Convenience plugin for Svelte Language Tools
     required_status_checks:
@@ -292,6 +322,8 @@ repos:
   LSP-taplo:
     description: TOML support for Sublime's LSP plugin
     homepage_url: https://taplo.tamasfe.dev
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-terraform:
     description: Convenience package for the terraform language server
     required_status_checks:
@@ -310,6 +342,8 @@ repos:
     - language-server-protocol
     - sublime-text
     - typst
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-tombi:
     description: TOML support for Sublime's LSP plugin provided through Tombi
     required_status_checks:
@@ -330,6 +364,8 @@ repos:
       jfcherng: admin
   LSP-typescript:
     description: TypeScript, JavaScript support for Sublime LSP plugin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-vetur:
     description: Vue support for Sublime's LSP plugin through Vetur (DEPRECATED)
   LSP-volar:
@@ -338,6 +374,8 @@ repos:
       ElMassimo: admin
   LSP-vue:
     description: Vue support for Sublime's LSP plugin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-wren-lsp:
     description: Wren language support for Sublime Text
     collaborators:
