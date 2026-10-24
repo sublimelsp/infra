@@ -178,6 +178,8 @@ repos:
     homepage_url: https://packagecontrol.io/packages/LSP-jdtls
     collaborators:
       LDAP: maintain
+    required_status_checks:
+    - Smoke test result
   LSP-json:
     description: Schema validation/completions for your JSON and Sublime files
     required_status_checks:
