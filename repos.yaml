@@ -55,10 +55,14 @@ repos:
     - sublime-text
     collaborators:
       jfcherng: admin
+    required_status_checks:
+    - Smoke test result
   LSP-Bicep:
     description: Language tooling for the Bicep language
     collaborators:
       rgant: maintain
+    required_status_checks:
+    - Smoke test result
   LSP-biome:
     description: Biome LSP server for Sublime Text
     required_status_checks:
@@ -67,10 +71,14 @@ repos:
     description: Bitbake Language Server for Sublime Text
     collaborators:
       huyhoang8398: maintain
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-clangd:
     description: C/C++ support for Sublime's LSP plugin provided through clangd.
     collaborators:
       LDAP: admin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-cmake:
     description: Convenience package for a basic cmake-language-server
   LSP-copilot:
@@ -83,10 +91,14 @@ repos:
     description: Spell check support for Sublime's LSP plugin provided through cspell.
     collaborators:
       mauroreisvieira: admin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-css:
     description: CSS, SCSS, LESS support for Sublime's LSP plugin
     collaborators:
       jfcherng: maintain
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-Dart:
     description: Convenience plugin for the Dart Analysis Server, bundled in the Dart SDK
     topics:
@@ -154,6 +166,8 @@ repos:
     description: HTML support for Sublime's LSP plugin
     collaborators:
       jfcherng: admin
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-intelephense:
     description: PHP support for Sublime's LSP plugin provided through intelephense.
     collaborators:
@@ -218,6 +232,8 @@ repos:
     description: An LSP server for Markdown provided through Marksman.
     collaborators:
       bitsper2nd: maintain
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-nimlangserver:
     description: A convenience package for the official Nim language server.
     collaborators:
