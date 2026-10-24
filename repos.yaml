@@ -203,6 +203,8 @@ repos:
     description: Convenience package for the LTeX Language Server (Spell/Grammar check for LaTex and Markdown)
     collaborators:
       LDAP: admin
+    required_status_checks:
+    - Smoke test result
   LSP-ltex-ls:
     description: Convenience package for the LTeX Language Server (Spell/Grammar check for LaTex and Markdown)
     homepage_url: https://packagecontrol.io/packages/LSP-ltex-ls
@@ -224,6 +226,8 @@ repos:
     description: Convenience plugin to install/update OmniSharp for LSP
     collaborators:
       genericptr: maintain
+    required_status_checks:
+    - Smoke test result
   LSP-oxfmt:
     description: Oxfmt LSP server for Sublime Text
     required_status_checks:
@@ -265,6 +269,8 @@ repos:
     description: Convenience package for the R language server
     collaborators:
       randy3k: admin
+    required_status_checks:
+    - Smoke test result
   LSP-relay:
     collaborators:
       Tyderion: maintain
@@ -299,6 +305,8 @@ repos:
     description: Sass support for Sublime’s LSP plugin through Some Sass language server
     collaborators:
       niksy: maintain
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-SonarLint:
     description: Linting from SonarSource
   LSP-SourceKit:
@@ -321,6 +329,8 @@ repos:
     description: Tailwind css support for Sublime's LSP plugin
     collaborators:
       mauroreisvieira: admin
+    required_status_checks:
+    - Smoke test result
   LSP-taplo:
     description: TOML support for Sublime's LSP plugin
     homepage_url: https://taplo.tamasfe.dev
@@ -338,6 +348,8 @@ repos:
     collaborators:
       jfcherng: admin
       LDAP: maintain
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-Tinymist:
     description: Typst support for Sublime's LSP plugin using the Tinymist language server
     topics:
@@ -358,6 +370,8 @@ repos:
     description: Twig support for Sublime’s LSP plugin
     collaborators:
       niksy: maintain
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-ty:
     description: LSP helper for ty - an extremely fast Python type checker, written in Rust.
     required_status_checks:
@@ -392,6 +406,8 @@ repos:
     - yaml
     collaborators:
       jfcherng: push
+    required_status_checks:
+    - smoke / Smoke test result
   LSP-zuban:
     description: LSP helper for starting and managing zuban python language server
     collaborators:
