@@ -41,12 +41,14 @@ repos:
     description: Astro support for Sublime's LSP plugin
     required_status_checks:
     - smoke / Smoke test result
+    - check-settings / changed_settings
   LSP-basedpyright:
     description: Python support for Sublime's LSP plugin provided through DetachHead/basedpyright.
     collaborators:
       jfcherng: admin
     required_status_checks:
     - smoke / Smoke test result
+    - Run schema update
   LSP-bash:
     description: Bash support for Sublime's LSP plugin provided through bash-language-server.
     topics:
@@ -57,6 +59,7 @@ repos:
       jfcherng: admin
     required_status_checks:
     - Smoke test result
+    - check-settings / changed_settings
   LSP-Bicep:
     description: Language tooling for the Bicep language
     collaborators:
@@ -129,6 +132,7 @@ repos:
     description: ESLint support for Sublime LSP plugin
     required_status_checks:
     - Smoke test result
+    - check-new-settings / changed_settings
   LSP-esphome:
     description: Validation, completion and hover help for ESPHome Yaml files.
     required_status_checks:
@@ -151,6 +155,7 @@ repos:
     description: Golang support for Sublime's LSP plugin
     required_status_checks:
     - Smoke test result
+    - Update settings
     collaborators:
       TerminalFi: maintain
   LSP-Grammarly:
@@ -267,10 +272,12 @@ repos:
     has_discussions: true
     required_status_checks:
     - smoke / Smoke test result
+    - check-settings / changed_settings
   LSP-pylsp:
     description: Convenience package for the Python Language Server
     required_status_checks:
     - smoke / Smoke test result
+    - check_schema
   LSP-pyproject:
     description: pyproject.toml support for Sublime's LSP plugin provided through pyproject server
     required_status_checks:
@@ -281,6 +288,7 @@ repos:
       jfcherng: admin
     required_status_checks:
     - smoke / Smoke test result
+    - Run schema update
   lsp-python-types:
     description: LSP types for python 3.8
   LSP-R:
@@ -311,6 +319,7 @@ repos:
     require_linear_history: true
     required_status_checks:
     - smoke / Smoke test result
+    - check-settings / changed_settings
     collaborators:
       daggy1234: maintain
   LSP-semgrep:
@@ -339,6 +348,7 @@ repos:
     description: Convenience plugin for Svelte Language Tools
     required_status_checks:
     - smoke / Smoke test result
+    - check-new-settings / changed_settings
   LSP-systemd:
     description: SublimeText LSP Support for https://github.com/JFryy/systemd-lsp
     collaborators:
@@ -411,6 +421,7 @@ repos:
     description: Vue support for Sublime's LSP plugin
     required_status_checks:
     - smoke / Smoke test result
+    - check-new-settings / changed_settings
   LSP-wren-lsp:
     description: Wren language support for Sublime Text
     collaborators:
@@ -427,6 +438,7 @@ repos:
       jfcherng: push
     required_status_checks:
     - smoke / Smoke test result
+    - check-settings / changed_settings
   LSP-zuban:
     description: LSP helper for starting and managing zuban python language server
     collaborators:
