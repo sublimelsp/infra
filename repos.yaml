@@ -250,7 +250,7 @@ repos:
     collaborators:
       genericptr: maintain
     required_status_checks:
-    - Smoke test result
+    - smoke / Smoke test result
   LSP-oxfmt:
     description: Oxfmt LSP server for Sublime Text
     required_status_checks:
