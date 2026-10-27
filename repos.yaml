@@ -121,6 +121,8 @@ repos:
   LSP-elixir:
     description: Elixir support for Sublime LSP plugin
     homepage_url: https://lsp.sublimetext.io/
+    required_status_checks:
+    - Smoke test result
     collaborators:
       ihabunek: admin
       princemaple: maintain
@@ -175,6 +177,8 @@ repos:
     - smoke / Smoke test result
   LSP-intelephense:
     description: PHP support for Sublime's LSP plugin provided through intelephense.
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       jfcherng: maintain
       willrowe: maintain
@@ -195,6 +199,8 @@ repos:
     - julia
     - language-server-protocol
     - sublime-text
+    required_status_checks:
+    - Smoke test result
     collaborators:
       jwortmann: admin
   LSP-kotlin:
@@ -205,6 +211,8 @@ repos:
       TerminalFi: maintain
   LSP-lean:
     description: Lean support for Sublime's LSP plugin
+    required_status_checks:
+    - Smoke test result
     collaborators:
       LexouDuck: maintain
   LSP-lemminx:
@@ -217,6 +225,8 @@ repos:
     - smoke / Smoke test result
   LSP-leo:
     description: Leo syntax and language server
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       dev-sptg: admin
       dev-sptg-aleosys: push
@@ -229,6 +239,8 @@ repos:
   LSP-ltex-ls:
     description: Convenience package for the LTeX Language Server (Spell/Grammar check for LaTex and Markdown)
     homepage_url: https://packagecontrol.io/packages/LSP-ltex-ls
+    required_status_checks:
+    - Smoke test result
     collaborators:
       LDAP: admin
   LSP-lua:
@@ -243,6 +255,8 @@ repos:
     - smoke / Smoke test result
   LSP-nimlangserver:
     description: A convenience package for the official Nim language server.
+    required_status_checks:
+    - Smoke test result
     collaborators:
       AmjadHD: admin
   LSP-OmniSharp:
@@ -336,6 +350,8 @@ repos:
     - smoke / Smoke test result
   LSP-SonarLint:
     description: Linting from SonarSource
+    required_status_checks:
+    - Smoke test result
   LSP-SourceKit:
     description: Convenience plugin for Apple's SourceKit language server
     required_status_checks:
@@ -351,6 +367,8 @@ repos:
     - check-new-settings / changed_settings
   LSP-systemd:
     description: SublimeText LSP Support for https://github.com/JFryy/systemd-lsp
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       macowie: push
   LSP-tailwindcss:
@@ -424,6 +442,8 @@ repos:
     - check-new-settings / changed_settings
   LSP-wren-lsp:
     description: Wren language support for Sublime Text
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       jossephus: maintain
   LSP-yaml:
@@ -441,6 +461,8 @@ repos:
     - check-settings / changed_settings
   LSP-zuban:
     description: LSP helper for starting and managing zuban python language server
+    required_status_checks:
+    - smoke / Smoke test result
     collaborators:
       relikd: maintain
   LSP:
