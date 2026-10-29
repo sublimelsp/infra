@@ -145,6 +145,11 @@ repos:
     description: File watcher implementation for Sublime LSP in Rust
     collaborators:
       ruihe774: maintain
+    required_status_checks:
+    - build / Build artifacts (macos-15)
+    - build / Build artifacts (macos-15-intel)
+    - build / Build artifacts (ubuntu-22.04)
+    - build / Build artifacts (windows-2022)
   LSP-flow:
     description: Helper package that sets up your flow LSP server automatically
     required_status_checks:
