@@ -491,7 +491,7 @@ repos:
     description: GitHub Action that smoke-tests LSP packages for Sublime Text
   lsp_utils:
     description: Module with LSP-related utilities for Sublime Text
-    homepage_url: https://sublimelsp.github.io/lsp_utils/
+    homepage_url: https://sublime-lsp-utils.netlify.app/
     required_status_checks:
     - CI
     - Type-check community packages
