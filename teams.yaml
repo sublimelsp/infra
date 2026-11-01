@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=./schemas/teams.schema.json
+# Teams of the sublimelsp organization. Members must be listed in members.yaml.
+
+maintainers:
+  description: Maintainers of the sublimelsp organization
+  members:
+  - jwortmann
+  - predragnikolic
+  - rchl
+  - rwols
