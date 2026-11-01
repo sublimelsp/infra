@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "teams.schema.json",
+  "title": "sublimelsp organization teams",
+  "description": "Teams of the sublimelsp organization and their members.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["description", "members"],
+    "properties": {
+      "description": {
+        "description": "Team description.",
+        "type": "string"
+      },
+      "members": {
+        "description": "GitHub usernames of the team members.",
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9]|-(?=[A-Za-z0-9])){0,38}$"
+        }
+      }
+    }
+  }
+}

@@ -39,6 +39,7 @@ jobs:
         run: |
           uvx check-jsonschema@0.38.2 --schemafile schemas/repos.schema.json repos.yaml
           uvx check-jsonschema@0.38.2 --schemafile schemas/members.schema.json members.yaml
+          uvx check-jsonschema@0.38.2 --schemafile schemas/teams.schema.json teams.yaml
 
       - name: Format
         run: terraform fmt -check -diff

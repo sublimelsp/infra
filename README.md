@@ -1,6 +1,6 @@
 # sublimelsp-infra
 
-Terraform configuration for the [sublimelsp](https://github.com/sublimelsp) GitHub organization. It manages organization members, repository settings, direct repository collaborators, GitHub Actions permissions and default branch rulesets.
+Terraform configuration for the [sublimelsp](https://github.com/sublimelsp) GitHub organization. It manages organization members, teams, repository settings, direct repository collaborators, GitHub Actions permissions and default branch rulesets.
 
 Changes are made by editing the YAML files and opening a pull request. GitHub Actions posts the Terraform plan as a comment on the pull request (the plan summary, a table of changed resources and a compact diff; on every push, earlier plan comments are hidden as outdated) and applies it once merged to `main`.
 
@@ -10,8 +10,9 @@ Changes are made by editing the YAML files and opening a pull request. GitHub Ac
 | --- | --- |
 | `repos.yaml` | Repositories, their settings and direct collaborators. |
 | `members.yaml` | Organization members and their role. |
+| `teams.yaml` | Teams and their members. |
 | `schemas/*.schema.json` | JSON schemas for the YAML files, for validation and completions in editors that use `yaml-language-server`. |
-| `repos.tf`, `members.tf` | Terraform resources generated from the YAML files. |
+| `repos.tf`, `members.tf`, `teams.tf` | Terraform resources generated from the YAML files. |
 | `versions.tf` | Terraform and provider versions, HCP Terraform state and the GitHub provider. |
 | `.github/workflows/terraform.yml` | Plan on pull requests, apply on push to `main`. |
 | `.github/scripts/plan-report.sh` | Builds the plan report used for the pull request comment and the workflow run summary. |
@@ -21,6 +22,10 @@ Changes are made by editing the YAML files and opening a pull request. GitHub Ac
 ### Members
 
 Edit `members.yaml`. The role is either `admin` (organization owner) or `member`. Adding a user sends an invitation; removing one removes them from the organization.
+
+### Teams
+
+Edit `teams.yaml`. Members must be listed in `members.yaml`. Organization owners are team maintainers, and other members are regular team members.
 
 ### Repositories
 
@@ -63,7 +68,7 @@ Pages, security and analysis settings and the repository template are not manage
 
 ### Validation
 
-Both YAML files are validated against the JSON schemas in `schemas/`, which reject unknown keys, wrong types and invalid values such as a misspelled setting or a `write` permission (use `push`). The workflow fails before planning if a file is invalid. Editors that use the [YAML language server](https://github.com/redhat-developer/yaml-language-server) (VS Code with the YAML extension, Sublime Text with LSP-yaml) pick the schemas up from the comment on the first line of each file and show errors and completions while editing. To validate locally with [uv](https://docs.astral.sh/uv/):
+The YAML files are validated against the JSON schemas in `schemas/`, which reject unknown keys, wrong types and invalid values such as a misspelled setting or a `write` permission (use `push`). The workflow fails before planning if a file is invalid. Editors that use the [YAML language server](https://github.com/redhat-developer/yaml-language-server) (VS Code with the YAML extension, Sublime Text with LSP-yaml) pick the schemas up from the comment on the first line of each file and show errors and completions while editing. To validate locally with [uv](https://docs.astral.sh/uv/):
 
 ```bash
 uvx check-jsonschema@0.38.2 --schemafile schemas/repos.schema.json repos.yaml
@@ -71,6 +76,10 @@ uvx check-jsonschema@0.38.2 --schemafile schemas/repos.schema.json repos.yaml
 
 ```bash
 uvx check-jsonschema@0.38.2 --schemafile schemas/members.schema.json members.yaml
+```
+
+```bash
+uvx check-jsonschema@0.38.2 --schemafile schemas/teams.schema.json teams.yaml
 ```
 
 ## Authentication
@@ -121,4 +130,4 @@ These steps are needed only once.
 
 - The legacy branch protection rules on `LSP-biome`, `LSP-lua`, `LSP-marksman`, `LSP-terraform` and `LSP-yaml`. They still apply alongside the ruleset and can be deleted in the GitHub UI once the ruleset covers them.
 - The disabled "st3 branch" ruleset on `LSP`.
-- Organization-wide settings and teams (the organization has no teams). Organization rulesets require a paid GitHub plan, so the default branch ruleset is created per repository.
+- Organization-wide settings. Organization rulesets require a paid GitHub plan, so the default branch ruleset is created per repository.
