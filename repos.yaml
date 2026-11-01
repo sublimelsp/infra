@@ -342,6 +342,7 @@ repos:
     description: LSP integration with Semgrep - fast static analysis tool powered by an open-source engine for finding bugs, detecting vulnerabilities, and enforcing code standards.
   LSP-serenata:
     description: PHP support for Sublime's LSP plugin using Serenata
+    archived: true
     collaborators:
       mdeboer: admin
   LSP-some-sass:
